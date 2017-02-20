@@ -1,0 +1,13 @@
+%table.table.table-striped#languages
+  %thead
+    %tr
+      %th Name
+      %th Type
+      %th Designed by
+
+  %tbody
+    - model.each do |language|
+      %tr
+        %td= language.name
+        %td= language.type
+        %td= designed_by(language)
